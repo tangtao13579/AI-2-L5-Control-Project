@@ -43,3 +43,4 @@
 .\output\asprotocol.o: ..\uCOS-III\uC-LIB\lib_ascii.h
 .\output\asprotocol.o: ..\uCOS-III\Source\os_type.h
 .\output\asprotocol.o: ..\uCOS-III\Ports\os_cpu.h
+.\output\asprotocol.o: ..\HAL\MotorControl.h

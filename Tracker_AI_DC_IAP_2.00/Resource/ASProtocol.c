@@ -7,6 +7,7 @@
 #include "RtcLocalModule.h"
 #include "os.h"
 #include "stm32f10x_rcc.h"
+#include "MotorControl.h"
 
 
 extern GlobalVariableDef GlobalVariable;
@@ -123,6 +124,7 @@ static void RWWorkMode2(unsigned char R_or_RW, unsigned short *value )
         }
 				else if((GlobalVariable.WorkModeBuffer.WorkMode & 0xFF) == 0xFE)//停机模式
         {
+            MotorAllStop();            /* Stop */
             GlobalVariable.WorkModeBuffer.WorkMode = AUTO_TRACKER_MODE; 
 					  RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR, ENABLE);	//使能PWR外设时钟
 	          

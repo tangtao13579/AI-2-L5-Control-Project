@@ -87,17 +87,19 @@ static void BatSOCLowCheck()
     {
         if((GlobalVariable.WorkMode.WorkMode & 0xFF) == AUTO_BATSOCLOW_MODE) /*BATSOCLOW */
         {
-            if(GlobalVariable.WarningAndFault.BatSOCLow == 0)
-            {
-                GlobalVariable.WorkMode.WorkMode = 0x00000000 | AUTO_MODE;
-            }
+            GlobalVariable.WarningAndFault.BatSOCLow = 1;
+//            if(GlobalVariable.WarningAndFault.BatSOCLow == 0)
+//            {
+//                GlobalVariable.WorkMode.WorkMode = 0x00000000 | AUTO_MODE;
+//            }
         }
         else
         {
-            if(GlobalVariable.WarningAndFault.BatSOCLow != 0)
-            {
-                GlobalVariable.WorkMode.WorkMode = 0x00000000 | AUTO_BATSOCLOW_MODE;
-            }
+            GlobalVariable.WarningAndFault.BatSOCLow = 0;
+//            if(GlobalVariable.WarningAndFault.BatSOCLow != 0)
+//            {
+//                GlobalVariable.WorkMode.WorkMode = 0x00000000 | AUTO_BATSOCLOW_MODE;
+//            }
         }
     }
     

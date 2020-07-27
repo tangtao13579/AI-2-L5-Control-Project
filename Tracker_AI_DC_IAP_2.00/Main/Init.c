@@ -41,7 +41,7 @@ static void FixedParaInit()
     HDVInit();
     GlobalVariable.FixePara.DeviceEdition = 0xC800;/*Fireware:2.00*/
     GlobalVariable.FixePara.DeviceEdition |= GetHardwareVersion();
-    GlobalVariable.FixePara.DeviceType    = 0x000A;
+    GlobalVariable.FixePara.DeviceType    = 0x000a;
 }
 
 
